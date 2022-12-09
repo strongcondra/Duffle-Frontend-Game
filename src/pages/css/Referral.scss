@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+$referral-top-gap: 88px;
+
+main.referral-page-main {
+    padding-bottom:0 !important;
+    height: calc(100vh - 30px);
+
+    .container-fluid > .row {
+        width:100%;
+    }
+
+    .referral-column {
+        thead > tr > th {
+            color:white;
+        }
+
+        .referral-table {
+            overflow-y: auto;
+        }
+
+        .referral-header {
+            width:92%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #262626;
+            border-radius: 20px;
+            padding:21px 25px;
+            margin:0 auto;
+            margin-bottom:77px;
+
+            p {
+                margin:0 10px;
+                color:white;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                text-align: center;
+
+                span {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 851px) {
+    main.referral-page-main .referral-column .referral-header {
+        width:100%;
+        padding:21px 10px;
+        
+        p {
+            font-size:15px;
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    main.referral-page-main .referral-column .referral-header {
+        width:100%;
+        padding:15px 5px;
+        border-radius: 10px;
+        margin-bottom:30px;
+        
+        p {
+            font-size:11px;
+            margin:0 4px;
+        }
+    }
+}

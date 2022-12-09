@@ -1,0 +1,48 @@
+.chat-message {
+    display: flex;
+    padding:6px 0px 20px 2px;
+    align-items: flex-start;
+    overflow-x: hidden;
+
+    .message-img {
+        margin-right:10px;
+
+        img {
+            width:44px;
+            height:44px;
+            border-radius: 100%;
+        }
+    }
+
+    .message-text {
+        width:calc(100% - 60px);
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        
+        .message-name {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom:0;
+            margin-top:-7px;
+        }
+
+        .message-content {
+            padding:4px;
+            background: #474747;
+            border-radius: 5.27439px 5.27439px 5.27439px 1.05488px;
+            width:100%;
+
+            span {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13.7134px;
+                line-height: 16px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

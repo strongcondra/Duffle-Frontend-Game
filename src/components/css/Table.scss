@@ -1,0 +1,50 @@
+.data-table {
+    width:100%;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+
+    tr {
+        height:46px;
+
+        &:nth-child(even) {
+            background-color: #2B2A2A;
+        }
+
+        .loss-return {
+            color:#AD3A31;
+        }
+
+        .profit-return {
+            color:#4A7C47;
+        }
+    }
+
+    thead {
+        border-radius: 20px 3px 0 0;
+
+        th {
+            height:46px;
+            font-family:"Poppins";
+            font-weight:500;
+            color:rgba(255,255,255,0.5);
+            font-size:15px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .data-table {
+        font-size: 11px;
+
+        thead {
+            th {
+                font-size:13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+header {
+    position: fixed;
+    width:100%;
+    height:75px;
+    padding:30px 0 30px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition:100ms;
+    z-index:4;
+    background-color: transparent;
+
+    .header-container {
+        position: relative;
+        width:calc(100% - 95px);
+	    left:95px;
+        padding:0 72px;
+
+        h1 {
+            font-family:"Varela Round";
+            font-size:24px;
+            color:#DDE4E7;
+            font-weight: 400;
+            margin:0;
+            display: flex;
+            align-items: center;
+
+            span {
+                line-height: 30px;
+            }
+
+            img {
+                height:30px;
+                margin-right:10px;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .balance-container {
+        display: flex;
+        margin-right:18px;
+
+        .balance {
+            border:2px solid black; //Desktop header doesn't have background so I have to put a border to .balance for preventing problems
+            margin-right:4px;
+            background-color: #D8B600;
+            border-radius: 100px 0 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:12px 8px 10px 13px;
+            font-weight: bold;
+            color:#000;
+
+            .dollar-sign {
+                font-family:"Montserrat";
+                margin-right:6px;
+                font-size:18px;
+            }
+
+            .balance-text {
+                font-family:"Montserrat";
+                font-size:16px;
+            }
+        }
+
+        .add-balance {
+            background-color: #D8B600;
+            border-radius: 0 100px 100px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:2px solid black;
+            
+            a {
+                color:black;
+                font-weight: 700;
+                text-decoration:none;
+                font-family:"Montserrat";
+                font-size:24px;
+                padding:0 5px 0 3px;
+            }
+        }
+    }
+
+    .username {
+        font-size: 18px;
+        font-family: "Montserrat";
+        color:#D8B600;
+        margin:0;
+        margin-right:20px;
+        font-weight: 700;
+    }
+
+    .profile-pic {
+        height:40px;
+        width:40px;
+        border-radius: 100%;
+        border:2px solid #D8B600;
+        margin-right:15px;
+    }
+}
+
+//Responsive
+@media screen and (max-width: 991px) {
+	.header-container {
+		padding:30px !important;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .header-container {
+        h1 {
+            font-size:17px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        height:45px !important;
+        background-color: #000;
+        padding:0 !important;
+    }
+
+    .header-container {
+        width:calc(100% - 60px) !important;
+		left:60px !important;
+        padding:0 !important;
+        padding-left:10px !important;
+
+        h1 {
+            font-size:12px !important;
+            max-width: 70px;
+        }
+    }
+
+    .username {
+        margin-right:5px !important;
+        font-size:13px !important;
+        max-width: 70px;
+    }
+
+    .profile-pic {
+        height:25px !important;
+        width:25px !important;
+        border:none !important;
+        margin-right:10px !important;
+    }
+
+    .balance-container {
+        flex-direction: column;
+
+        .balance {
+            background-color: transparent !important;
+            padding:0 !important;
+            margin:0 !important;
+            margin-top:10px !important;
+            border:none !important;
+
+            .balance-text {
+                color:white !important;
+            }
+
+            .dollar-sign {
+                color:#D8B600;
+                margin-right:0 !important;
+            }
+        }
+
+        .add-balance {
+            background-color: transparent !important;
+            margin-top:-15px;
+            border:none !important;
+
+            a {
+                padding:0 !important;
+                margin-right:5px;
+                color:white !important;
+            }
+
+            &::after {
+                content:"Add Balance";
+                color:white;
+                font-family: "Montserrat";
+                font-size:10px;
+                color:#D8B600;
+                margin-left:-3px;
+                white-space: nowrap;
+            }
+        }
+    }
+}

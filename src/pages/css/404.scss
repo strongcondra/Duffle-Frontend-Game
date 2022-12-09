@@ -1,0 +1,109 @@
+@import 'mixins.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+.yellow-polygon-background {
+    @include yellow-polygon;
+}
+
+._404-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+
+    > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: fit-content;
+        margin-top:-140px;
+
+        &:nth-child(1) { //Logo Container
+            border-right:3px solid #FFFFFF1F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                padding-right:36px;
+                width:100%;
+            }
+        }
+
+        &:nth-child(2) { //Text Container
+            padding-left:50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            h1 {
+                font-size:112px;
+                color:#DAB23B;
+                font-family:"Montserrat";
+                font-weight: 700;
+                //margin-top:-75px;
+                margin-bottom:8px;
+            }
+
+            h2 {
+                font-family:"Montserrat";
+                font-weight: 500;
+                font-size:30px;
+                color:#fff;
+            }
+
+            p {
+                font-family:"Montserrat";
+                font-weight: 500;
+                font-size:20px;
+                color:#fff;
+                margin-top:16px;
+            }
+
+            a {
+                padding:8px 32px;
+                margin-top:27px;
+                background-color: #DAB23B;
+                color:#ddd;
+                font-family:"Montserrat";
+                font-weight:600;
+                text-decoration: none;
+                border-radius: 6px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1234px) {
+    ._404-container {
+        > div {
+            &:nth-child(1) { //Logo Container
+                display: none;
+            }
+
+            &:nth-child(2) { //Text Container
+                padding:0;
+                padding-top:100px;
+                align-items: center !important;
+
+                h1, h2, p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px) {
+    ._404-container {
+        > div {
+            &:nth-child(2) h1 {
+                font-size:70px !important;
+            }
+        }
+    }
+}

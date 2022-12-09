@@ -1,0 +1,24 @@
+.provably-fair {
+    .text-container {
+        h4 {
+            font-size:26px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .provably-fair-code-container {
+            margin-top:43px;
+            
+            > .CodeMirror {
+                border-radius: 10px;
+                height:450px;
+
+                .CodeMirror-code {
+                    font-size:23px;
+                }
+            }
+        }
+    }
+}

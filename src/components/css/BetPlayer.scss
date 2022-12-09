@@ -1,0 +1,34 @@
+.bet-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:5px solid rgba(255,255,255,0.04);
+    padding:17px 0;
+
+    .user {
+        img {
+            border-radius: 8px;
+            width:45px;
+            height:45px;
+            margin-right:10px;
+        }
+
+        span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            color: #FFFFFF;
+        }
+    }
+
+    .amount {
+        border-radius: 5px;
+        padding:4px 6px;
+        background-color: transparent;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+    }
+}

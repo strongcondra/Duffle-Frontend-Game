@@ -1,0 +1,157 @@
+.dice-game {
+    padding-top:80px;
+
+    .top-container {
+        background: #060606d2;
+        border-radius: 20px;
+        width:100%;
+        height:450px;
+        padding:70px 14px;
+
+        .game-screen {
+            //TEST
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:white;
+            height:100%;
+            font-family:"Montserrat";
+        }
+
+        .custom-bet-placement {
+            > div > p:first-child {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                color: #FFFFFF;
+                opacity: 0.5;
+                margin-bottom:3px;
+            }
+
+            input {
+                width:100%;
+                background: #2E2E2E;
+                border-radius: 10px 0px 0px 10px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18px;
+                border:none;
+                padding:9px 20px;
+                height:50px;
+                outline:none;
+                color: #FFFFFF;
+            }
+
+            button {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                color: #FFFFFF;
+            }
+
+            .roll-under {
+                margin-bottom:10px;
+                position: relative;
+
+                button {
+                    position: absolute;
+                    height:50px;
+                    width:50px;
+                    background: rgb(28,27,26);
+                    border:none;
+                    right:0px;
+                    z-index:2;
+                }
+            }
+
+            .bet-entry {
+                position: relative;
+
+                input {
+                    padding-right:70%;
+                    padding-left:37px;
+                }
+
+                > span {
+                    position: absolute;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    border:none;
+                    padding:9px 20px;
+                    height:50px;
+                    outline:none;
+                    color: #FFFFFF;
+                    top:27px;
+                }
+
+                .button-container {
+                    position: absolute;
+                    right:0px;
+                    top:24px;
+                    display: flex;
+
+                    button {
+                        height:50px;
+                        width:50px;
+                        background: rgb(28,27,26);
+                        border:none;
+
+                        p {
+                            margin:0;
+                            width:100%;
+                            line-height:30px;
+                            padding-right:10px;
+                            text-align: center;
+                            border-right:1px solid rgba(255, 255, 255, 0.692);
+                        }
+
+                        &:last-child p {
+                            border:none;
+                        }
+                        &:first-child p {
+                            padding-left:5px;
+                        }
+                    }
+                }
+            }
+
+            .roll-button {
+                margin-top:20px;
+                background: #DAB23B;
+                border-radius: 10px;
+                width:100%;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height:50px;
+                color:rgba(0,0,0,0.9);
+
+            }
+        }
+    }
+    
+    .bottom-container {
+        margin-top:30px;
+        background: #060606d2;
+        border-radius: 20px;
+        width:100%;
+        height:300px;
+    }
+
+    .bet-history {
+        background: #060606d2;
+        border-radius: 20px;
+        width:100%;
+        height:100%;
+    }
+}

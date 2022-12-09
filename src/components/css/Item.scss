@@ -1,0 +1,36 @@
+.item {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), #2B2A2A;
+    margin:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    color:White;
+    position: relative;
+    aspect-ratio: 1;
+    
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+    box-shadow: 0 4px 0 #2b2a2a;
+
+    .item-name {
+        position: absolute;
+        top:10px;
+    }
+
+    .item-price {
+        position: absolute;
+        bottom:-10px;
+    }
+
+    img {
+        margin:30px;
+        height:120px;
+        width:120px;
+    }
+}

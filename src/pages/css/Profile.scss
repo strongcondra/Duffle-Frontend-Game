@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+$profile-top-gap: 88px;
+
+main.profile-page-main {
+    padding-bottom:0 !important;
+}
+
+.profile-column {
+    padding-left:70px;
+    
+    .profile-container {
+        width:100%;
+        margin-top:$profile-top-gap;
+        min-height:calc(100vh - 72px - $profile-top-gap);
+        background-color: #060606;
+        border-radius: 20px 20px 0 0;
+        padding:60px 39px 0 39px;
+
+        .profile-pic-container {
+            img {
+                width:72px;
+                height:72px;
+                border-radius: 100%;
+            }
+        }
+
+        .profile-header {
+            margin-bottom:40px;
+            display: flex;
+
+            > .profile-info-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-left:20px;
+
+                > div {
+                    display: flex;
+                    align-items: center;
+
+                    h5 {
+                        font-family:"Montserrat";
+                        font-weight: 700;
+                        color:#fff;
+                        font-size:18px;
+                        margin: 0;
+                    }
+
+                    input {
+                        background-color:#2E2E2E;
+                        color:white;
+                        font-family:"Poppins";
+                        font-weight: 400;
+                        font-size:14px;
+                        border: 1px solid #FFFFFF1A;
+                        border-radius: 10px;
+                        padding:0 9px 0 9px;
+                        width: 372px;
+                        height:42px;
+                        margin-right:7px;
+                    }
+
+                    button {
+                        background-color: #DAB23B;
+                        color:White;
+                        font-family: "Poppins";
+                        font-weight: 500;
+                        font-size:15px;
+                        border-radius: 10px;
+                        width:100px;
+                        height:42px;
+                        border:none;
+                    }
+
+                    p {
+                        margin:0;
+                        margin-left:17px;
+                        font-family: "Montserrat";
+                        font-weight: 600;
+                        font-size: 14px;
+                        color:#FFFFFF40;
+
+                        a {
+                            color:white;
+                            text-decoration: none;
+                            font-family: "Poppins";
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile-navbar {
+            margin-bottom:5px;
+
+            a {
+                text-decoration: none;
+                font-family: "Montserrat";
+                font-weight: 700;
+                color: #FFFFFF40;
+                margin-right:35px;
+                white-space: nowrap;
+
+                &:hover {
+                    color:#FFFFFF60;
+                }
+
+                &.active {
+                    color:white !important;
+                }
+            }
+        }
+    }
+
+    .profile-table {
+        max-height: 691px;
+        overflow-y: auto;
+
+        .data-table {
+            border: 1px solid rgba(255, 255, 255, 0.04);
+
+            th {
+                background-color: #2B2A2A;
+            }
+        }
+    }
+}
+
+//Responsive
+@media screen and (max-width: 1399px) {
+    main.profile-page-main {
+        bottom:-30px;
+    }
+
+    .profile-column {
+        padding-left:0;
+
+        .profile-container {
+            margin-top:30px;
+            height:calc(100vh - 72px - 30px);
+            border-radius:20px;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .profile-header > .profile-info-container > div {
+        flex-wrap: wrap;
+
+        h5 {
+            margin-bottom:10px !important;
+        }
+
+        input {
+            width:calc(100% - 60px) !important;
+            height:33px !important;
+        }
+
+        button {
+            width:50px !important;
+            height:33px !important;
+        }
+
+        p {
+            margin-left:0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .profile-column .profile-container {
+        padding:30px 10px;
+
+        .profile-navbar {
+            margin-top:-10px;
+            margin-bottom:10px;
+
+            a {
+                display: block;
+                text-align: center;
+                margin:0;
+            }
+        }
+
+        .profile-header {
+            flex-direction: column;
+            align-items: center;
+
+            > .profile-info-container {
+                align-items: center;
+                margin:0;
+                margin-top:20px;
+
+                > div {
+                    justify-content: center;
+
+                    * {
+                        margin-left:0 !important;
+                        margin-right:0 !important;
+                    }
+
+                    input {
+                        width:100% !important;
+                        height:33px !important;
+                        margin-bottom:10px;
+                    }
+        
+                    button {
+                        width:50% !important;
+                        margin-bottom:5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 920px) {
+    .profile-column .profile-table {
+        max-height: 50vh;
+    }
+}
+
+@media screen and (max-height: 1000px) and (max-width: 500px) {
+    .profile-column .profile-table {
+        max-height: 40vh;
+    }
+}
+
+@media screen and (max-height: 764px) {
+    .profile-column .profile-table {
+        max-height: 30vh;
+        margin-top:20px;
+    }
+}

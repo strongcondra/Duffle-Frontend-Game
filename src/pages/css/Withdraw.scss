@@ -1,0 +1,141 @@
+$withdraw-border-radius: 20px;
+
+main.withdraw-page-main {
+    padding-top:100px;
+
+    .left-side-container {
+        height:calc(100vh - 150px);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), #2B2A2A;
+        border-radius: $withdraw-border-radius;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding:0;
+
+        .bottom-menu {
+            width:100%;
+
+            .selected-items {
+                width:100%;
+                padding-bottom:14px;
+
+                .selected-item {
+                    color:white;
+                    text-align: center;
+                    padding:6px 0;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+
+                    &:nth-child(odd) {
+                        background-color: #2B2A2A;
+                    }
+                }
+            }
+
+            .withdraw-button {
+                width:100%;
+                height:48px;
+
+                a {
+                    width:100%;
+                    display: block;
+                    background-color: #DAB23B;
+                    color:white;
+                    border-radius: 0 0 $withdraw-border-radius $withdraw-border-radius;
+                    text-align: center;
+                    text-decoration: none;
+                    padding:14px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                    transition:200ms;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #daa60a;
+                    }
+                }
+            }
+        }
+    }
+    .right-side-container .items-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 2px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: calc(100vh - 150px);
+        margin-top:0px;
+        padding-left:50px;
+        margin-right:-20px;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0, 0, 0, 0.737)));
+    }
+}
+
+//Responsive
+@media screen and (max-width: 1838px) {
+    main.withdraw-page-main .right-side-container .items-container {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media screen and (max-width: 1553px) {
+    main.withdraw-page-main .right-side-container .items-container {
+        grid-template-columns: auto auto auto;
+        padding-left:10px;
+    }
+}
+
+@media screen and (max-width: 1373px) {
+    main.withdraw-page-main {
+        .left-side-container {
+            min-width: 200px;
+        }
+        .right-side-container {
+            width: calc(100% - 200px);
+        }
+    }
+}
+
+@media screen and (max-width: 1033px) {
+    main.withdraw-page-main .right-side-container .items-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    main.withdraw-page-main {
+        padding-top:100px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main.withdraw-page-main {
+        .left-side-container {
+            height: 300px;
+        }
+        .right-side-container {
+            width: 100%;
+            margin-left:-10px;
+
+            .items-container {
+                max-height: calc(100vh - 450px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 523px) {
+    main.withdraw-page-main .right-side-container .items-container {
+        grid-template-columns: auto;
+
+        .item img {
+            width:70%;
+            height:70%;            
+        }
+    }
+}

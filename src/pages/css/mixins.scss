@@ -1,0 +1,18 @@
+@mixin tag {
+    font-family:"Rubik";
+    color:white;
+    background-color: #FFFFFF14;
+    padding:8px 16px;
+    border-radius:8px;
+    font-size:15px;
+    white-space: nowrap;
+}
+
+@mixin yellow-polygon {
+    background-image: url('../../images/yellow-polygon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -60px 0;
+    height:100vh;
+    padding:0;
+}

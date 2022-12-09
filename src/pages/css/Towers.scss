@@ -1,0 +1,72 @@
+.towers-game {
+    .game-screen {
+        background: rgba(6, 6, 6, 0.8);
+        border-radius: 10px;
+
+        .game-scores {
+            .score-difficulty-tab {
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                padding:20px 0 10px 0;
+
+                p {
+                    font-family: 'Varela Round';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: rgba(255,255,255,0.8);
+                    margin:0;
+                }
+            }
+
+            .score-table-wrapper {
+                border-radius: 10px;
+                overflow: hidden;
+
+                .data-table {
+                    font-family: 'Varela Round';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    color: rgba(255,255,255,1);
+                    margin:0;
+
+                    thead {
+                        display: none;
+                    }
+                    tbody > tr {
+                        &:nth-child(odd) {
+                            background-color: rgba(27, 27, 27, 0.8);
+                        }
+                    }
+                }
+            }
+
+            .score-bottom-tab {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding:20px 0;
+
+                > div {
+                    background: linear-gradient(0deg, #474747, #474747);
+                    opacity: 0.8;
+                    border: 2px solid #DAB23B;
+                    border-radius: 10px;
+                    width:80px;
+                    text-align: center;
+
+                    span {
+                        font-family: 'Varela Round';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 25px;
+                        line-height: 30px;
+                        color:rgba(255,255,255,0.8);
+                    }
+                }
+            }
+        }
+    }
+}

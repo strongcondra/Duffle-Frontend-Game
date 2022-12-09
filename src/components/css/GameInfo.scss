@@ -1,0 +1,55 @@
+.data-container {
+    background: rgba(6, 6, 6, 0.8);
+    border-radius: 10px;
+    padding:14px 0;
+    height: 775px;
+
+    .top-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        p {
+            font-family: 'Varela Round';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            color: #DAB23B;
+            opacity: 0.8;
+        }
+    }
+
+    .body-wrapper {
+        height: calc(100% - 70px);
+        display: block;
+        overflow-y: auto;
+
+        .data-item {
+            width:calc(100% - 70px);
+            height:50px;
+            background: linear-gradient(0deg, #474747, #474747);
+            opacity: 0.8;
+            border: 2px solid #DAB23B;
+            border-radius: 20px;
+            display: block;
+            margin:20px auto;
+        }
+    }
+
+    .bottom-wrapper {
+        display: flex;
+        justify-content: center;
+
+        p {
+            font-family: 'Varela Round';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #4F6570;
+            opacity: 0.8;
+        }
+    }
+}
